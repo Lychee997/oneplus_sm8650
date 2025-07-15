@@ -211,7 +211,7 @@ index e461c0711..946f53af3 100644
 +++ b/drivers/soc/Kconfig
 @@ -28,4 +28,7 @@ source "drivers/soc/ux500/Kconfig"
  source "drivers/soc/versatile/Kconfig"
- source "drivers/soc/xilinx/Kconfig",
+ source "drivers/soc/xilinx/Kconfig"
 diff --git a/kernel/Makefile b/kernel/Makefile
 index c6e7c7529..9528a4c26 100644
 --- a/kernel/Makefile
