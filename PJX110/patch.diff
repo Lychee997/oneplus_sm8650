@@ -225,6 +225,8 @@ index c6e7c7529..9528a4c26 100644
  obj-$(CONFIG_STACKTRACE) += stacktrace.o
  obj-y += time/
  obj-$(CONFIG_FUTEX) += futex/
++obj-$(CONFIG_OPLUS_FEATURE_GAME_OPT) += game_opt/
++obj-$(CONFIG_SCHED_CLASS_EXT) += sched_ext/
  obj-$(CONFIG_GENERIC_ISA_DMA) += dma.o
  obj-$(CONFIG_SMP) += smp.o
  ifneq ($(CONFIG_SMP),y)
