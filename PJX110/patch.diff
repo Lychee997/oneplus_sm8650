@@ -230,21 +230,6 @@ index c6e7c7529..9528a4c26 100644
  obj-$(CONFIG_GENERIC_ISA_DMA) += dma.o
  obj-$(CONFIG_SMP) += smp.o
  ifneq ($(CONFIG_SMP),y)
-diff --git a/fs/overlayfs/util.c b/fs/overlayfs/util.c
-index 63e0bdbd2..805523483 100644
---- a/fs/overlayfs/util.c
-+++ b/fs/overlayfs/util.c
-@@ -145,9 +145,7 @@ void ovl_dentry_init_flags(struct dentry *dentry, struct dentry *upperdentry,
- bool ovl_dentry_weird(struct dentry *dentry)
- {
- 	return dentry->d_flags & (DCACHE_NEED_AUTOMOUNT |
--				  DCACHE_MANAGE_TRANSIT |
--				  DCACHE_OP_HASH |
--				  DCACHE_OP_COMPARE);
-+				  DCACHE_MANAGE_TRANSIT);
- }
- 
- enum ovl_path_type ovl_path_type(struct dentry *dentry)
 diff --git a/include/linux/sched.h b/include/linux/sched.h
 index f5b50c82a..b630da89a 100644
 --- a/include/linux/sched.h
