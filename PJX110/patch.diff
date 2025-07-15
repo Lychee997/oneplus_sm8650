@@ -205,31 +205,6 @@ index 52d92225a..6157b9763 100644
      "net/l2tp/l2tp_core.ko",
      "net/l2tp/l2tp_ppp.ko",
      "net/mac802154/mac802154.ko",
-diff --git a/drivers/soc/Kconfig b/drivers/soc/Kconfig
-index e461c0711..946f53af3 100644
---- a/drivers/soc/Kconfig
-+++ b/drivers/soc/Kconfig
-@@ -28,4 +28,7 @@ source "drivers/soc/ux500/Kconfig"
- source "drivers/soc/versatile/Kconfig"
- source "drivers/soc/xilinx/Kconfig"
-
-+source "kernel/game_opt/Kconfig"
-+source "kernel/sched_ext/Kconfig"
-+
- endmenu
-diff --git a/kernel/Makefile b/kernel/Makefile
-index c6e7c7529..9528a4c26 100644
---- a/kernel/Makefile
-+++ b/kernel/Makefile
-@@ -58,6 +58,8 @@ obj-$(CONFIG_PROFILING) += profile.o
- obj-$(CONFIG_STACKTRACE) += stacktrace.o
- obj-y += time/
- obj-$(CONFIG_FUTEX) += futex/
-+obj-$(CONFIG_OPLUS_FEATURE_GAME_OPT) += game_opt/
-+obj-$(CONFIG_SCHED_CLASS_EXT) += sched_ext/
- obj-$(CONFIG_GENERIC_ISA_DMA) += dma.o
- obj-$(CONFIG_SMP) += smp.o
- ifneq ($(CONFIG_SMP),y)
 diff --git a/include/linux/sched.h b/include/linux/sched.h
 index f5b50c82a..b630da89a 100644
 --- a/include/linux/sched.h
